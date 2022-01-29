@@ -1,20 +1,21 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using UnityEngine;
 
 public class LaserCircle : BaseAttack
 {
     private GameObject laser => GameManager.Instance.Laser;
+    private TeamedObject teamedObject;
     private float scale => GameManager.Instance.Data.LaserScale;
+    private float minHitDistance => GameManager.Instance.Data.LaserMinHitDistance;
+    private float maxHitDistance => GameManager.Instance.Data.LaserMaxHitDistance;
     private float followSpeed => GameManager.Instance.Data.LaserSpeed;
 
     private float tickRate => GameManager.Instance.Data.LaserTickRate;
     private float remainingTickRate;
-
-    private float toggleTime => GameManager.Instance.Data.LaserToggleTime;
-    private float remainingToggleTime;
 
     private Collider2D col;
 
@@ -23,8 +24,8 @@ public class LaserCircle : BaseAttack
         laser.SetActive(true);
         laser.transform.position = GameManager.Instance.Character.transform.position;
         col = laser.GetComponent<Collider2D>();
+        teamedObject = laser.GetComponent<TeamedObject>();
         remainingTickRate = tickRate;
-        remainingToggleTime = 0;
         col.enabled = false;
     }
 
@@ -39,11 +40,12 @@ public class LaserCircle : BaseAttack
         UpdateScale();
         Timer.LoopedCountDown(ref remainingTickRate, tickRate, () =>
         {
-            ToggleCollision(true);
-            remainingToggleTime = toggleTime;
+            CheckCloseEnnemies();
         });
 
-        Timer.CountDown(ref remainingToggleTime, () => { ToggleCollision(false); });
+
+        Debug.DrawLine(laser.transform.position, laser.transform.position + Vector3.right * maxHitDistance, Color.yellow);
+        Debug.DrawLine(laser.transform.position, laser.transform.position + Vector3.right * minHitDistance, Color.red);
     }
 
     private void MoveTowardsPlayer()
@@ -59,12 +61,15 @@ public class LaserCircle : BaseAttack
 
     private void CheckCloseEnnemies()
     {
-        //Collider3D[] ennemies = Physics2D.OverlapCircleAll(laser.transform.position, scale);
+        List<Collider2D> ennemies = Physics2D.OverlapCircleAll(laser.transform.position, maxHitDistance).Where(t => t.GetComponent<EnnemyManager>()).ToList();
+        for (int i = 0; i < ennemies.Count; i++)
+        {
+            float distance = Vector2.Distance(ennemies[i].transform.position, laser.transform.position);
+            if(distance > minHitDistance)
+            {
+                ennemies[i].GetComponent<EnnemyManager>().Collide(teamedObject);
+            }
+        }        
     }
-
-    private void ToggleCollision(bool toggle)
-    {
-        Debug.Log(toggle);
-        col.enabled = toggle;
-    }
+    
 }
