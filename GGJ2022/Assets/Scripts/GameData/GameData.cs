@@ -25,7 +25,6 @@ public class GameData : ScriptableObject
     public float LaserTickRate;
 
     [Header("Enemies")]
-    public int EnnemyMaxHealth;
     public int ScorePerKill;
 
     [Header("Enemies Spawn")]
@@ -33,6 +32,7 @@ public class GameData : ScriptableObject
     public float EnemiesSpawnRate;
 
     [Header("Walls")]
+    public List<GameObject> Walls;
     public AnimationCurve WallSpeedCurve;
     public float WallSpeed;
     public Vector2 TimeBetweenWallsSpawns;

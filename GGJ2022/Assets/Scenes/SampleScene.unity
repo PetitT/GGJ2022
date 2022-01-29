@@ -1314,7 +1314,7 @@ MonoBehaviour:
   - {fileID: 6543962635734303611, guid: bf0d27d9c7ab6f9419073fc80997d40c, type: 3}
   - {fileID: 8337812763534061983, guid: bf0d27d9c7ab6f9419073fc80997d40c, type: 3}
   speed: 15
-  transitionSpeed: 10
+  transitionSpeed: 15
 --- !u!1001 &5128622923208845996
 PrefabInstance:
   m_ObjectHideFlags: 0

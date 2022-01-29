@@ -7,13 +7,15 @@ public class Enemy : MonoBehaviour
 {
     public static event Action onDeath;
 
+    public int maxHealth = 5;
+
     private Health health;
     private TeamedObject teamedObject;
     public BaseAI AI;
 
     private void Awake()
     {
-        health = new Health(GameManager.Instance.Data.EnnemyMaxHealth);
+        health = new Health(maxHealth);
         teamedObject = GetComponent<TeamedObject>();
         health.onDeath += Health_onDeath;
 
@@ -23,6 +25,9 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         AI.Execute();
+
+        if (!GameManager.Instance.CameraBordermanager.IsWithinScreenBounds(transform.position, 5.0f))
+            gameObject.SetActive(false);
     }
 
     private void OnEnable()

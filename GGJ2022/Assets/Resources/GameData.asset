@@ -25,7 +25,6 @@ MonoBehaviour:
   LaserMaxHitDistance: 2
   LaserMinHitDistance: 1.5
   LaserTickRate: 0.1
-  EnnemyMaxHealth: 3
   ScorePerKill: 5
   EnemiesList:
   - {fileID: 1741621471574320076, guid: 9fe2bafa45ea3da44b7f38e3b56621c5, type: 3}
@@ -33,33 +32,46 @@ MonoBehaviour:
   - {fileID: 1283424315923127193, guid: a39f918478dd6064fa2e551fd19e9566, type: 3}
   - {fileID: 1618203245834071288, guid: aa7429192215a224980c2e7b1c75a693, type: 3}
   - {fileID: 7844853041393696202, guid: d795ed1814e8ca34e8a055c519cddd9e, type: 3}
+  - {fileID: 4689516126741554427, guid: 8c050de0e0575234bad4260441294b1e, type: 3}
   EnemiesSpawnRate: 0.25
+  Walls:
+  - {fileID: 1840515201159431778, guid: ee2d5818acc14b642bbf360812a3db8f, type: 3}
+  - {fileID: 1840515201159431778, guid: e635396e83118d94d8d3e8dfca934bc3, type: 3}
   WallSpeedCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0.017547607
       value: 0.49752808
-      inSlope: -3.2317913
-      outSlope: -3.2317913
+      inSlope: -1.096511
+      outSlope: -1.096511
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.0651206
+      outWeight: 0.35917133
     - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 2
-      outSlope: 2
+      time: 0.30951363
+      value: 0.032572698
+      inSlope: 0.038316056
+      outSlope: 0.038316056
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.7896328
+      value: 2.466625
+      inSlope: -0.061051417
+      outSlope: -0.061051417
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.16709752
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  WallSpeed: 5
-  TimeBetweenSpawns: {x: 3, y: 10}
+  WallSpeed: 20
+  TimeBetweenWallsSpawns: {x: 3, y: 10}
   ScreenShakeTimeInMiliseconds: 300
   ScreenShakeAmplitude: 2
   ScreenShakeFrequency: 2
