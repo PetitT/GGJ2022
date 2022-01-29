@@ -1,0 +1,1 @@
+public enum ScreenBorderSide { Top,Bottom,Right,Left}
