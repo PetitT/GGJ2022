@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missileShot: {fileID: 8300000, guid: 8464c2c58e0504f448d6ddfb0a3e7070, type: 3}
   enemyExplosion: {fileID: 8300000, guid: db49f4d11db44e34bb1024b2471cf9f1, type: 3}
+  enemyDeath: {fileID: 8300000, guid: 7a602f7988061914eb135ecd8a9d2940, type: 3}
+  playerDamage: {fileID: 8300000, guid: 1ebea993676a8ed4f88f6f9f25b10f62, type: 3}
+  playerExplosion: {fileID: 8300000, guid: 562f625b1231614449e10a2bb8c64692, type: 3}

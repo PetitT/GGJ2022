@@ -8,6 +8,9 @@ public class FeedbackData : ScriptableObject
     [Header("Sound Effects")]
     public AudioClip missileShot;
     public AudioClip enemyExplosion;
+    public AudioClip enemyDeath;
+    public AudioClip playerDamage;
+    public AudioClip playerExplosion;
 
     public static FeedbackData GetFeedbackData()
     {

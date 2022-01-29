@@ -1307,7 +1307,7 @@ MonoBehaviour:
   - {fileID: -8924496928804095581, guid: 8a90222e55a8a644294c0b073128b3d9, type: 3}
   - {fileID: -395299380504392518, guid: 8a90222e55a8a644294c0b073128b3d9, type: 3}
   - {fileID: 4627720674186332283, guid: 8a90222e55a8a644294c0b073128b3d9, type: 3}
-  speed: 10
+  speed: 15
 --- !u!4 &5128622922254363428 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1741621471574320078, guid: 9fe2bafa45ea3da44b7f38e3b56621c5, type: 3}
