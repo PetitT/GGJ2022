@@ -22,6 +22,11 @@ MonoBehaviour:
   MissilesSpeed: 20
   LaserSpeed: 14.99
   LaserScale: 20
-  LaserTickRate: 1
-  LaserToggleTime: 0.1
+  LaserMaxHitDistance: 2
+  LaserMinHitDistance: 1.5
+  LaserTickRate: 0.1
   EnnemyMaxHealth: 10
+  EnemiesList:
+  - {fileID: 1741621471574320076, guid: 9fe2bafa45ea3da44b7f38e3b56621c5, type: 3}
+  - {fileID: 3332536008911018067, guid: 3e2635fcbe71ce9439d559df3519d75a, type: 3}
+  EnemiesSpawnRate: 1

@@ -24,8 +24,12 @@ public class GameData : ScriptableObject
     public float LaserMinHitDistance;
     public float LaserTickRate;
 
-    [Header("Ennemies")]
+    [Header("Enemies")]
     public int EnnemyMaxHealth;
+
+    [Header("Enemies Spawn")]
+    public List<GameObject> EnemiesList;
+    public float EnemiesSpawnRate;
 
     public static GameData GetGameData()
     {

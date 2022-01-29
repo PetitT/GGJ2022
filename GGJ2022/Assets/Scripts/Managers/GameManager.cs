@@ -19,6 +19,7 @@ public class GameManager : Singleton<GameManager>
     public CharacterCollisionManager CharacterCollisionManager = new CharacterCollisionManager();
     public TeamDisplayManager TeamDisplayManager = new TeamDisplayManager();
     public CombatManager CombatManager = new CombatManager();
+    public EnemySpawnManager EnemySpawnManager = new EnemySpawnManager();
 
     private void Awake()
     {
@@ -30,6 +31,7 @@ public class GameManager : Singleton<GameManager>
         managers.Add(TeamManager);
         managers.Add(TeamDisplayManager);
         managers.Add(CombatManager);
+        managers.Add(EnemySpawnManager);
 
         managers.ForEach(t => t.OnAwake());
     }
