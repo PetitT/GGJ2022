@@ -32,7 +32,7 @@ public class WallMovement : MonoBehaviour
 
     private void Move()
     {
-        float currentSpeed = speedCurve.Evaluate(lifeTime);
+        float currentSpeed = speedCurve.Evaluate(lifeTime) * maximumSpeed;
         transform.Translate(currentSpeed * Time.deltaTime * Vector2.up);
     }
 }
