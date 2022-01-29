@@ -30,6 +30,9 @@ MonoBehaviour:
   EnemiesList:
   - {fileID: 1741621471574320076, guid: 9fe2bafa45ea3da44b7f38e3b56621c5, type: 3}
   - {fileID: 3332536008911018067, guid: 3e2635fcbe71ce9439d559df3519d75a, type: 3}
+  - {fileID: 1283424315923127193, guid: a39f918478dd6064fa2e551fd19e9566, type: 3}
+  - {fileID: 1618203245834071288, guid: aa7429192215a224980c2e7b1c75a693, type: 3}
+  - {fileID: 7844853041393696202, guid: d795ed1814e8ca34e8a055c519cddd9e, type: 3}
   EnemiesSpawnRate: 0.25
   ScreenShakeTimeInMiliseconds: 300
   ScreenShakeAmplitude: 2

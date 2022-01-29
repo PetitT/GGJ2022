@@ -7,7 +7,12 @@ public class TeamManager : BaseManager
 {
     public Team currentTeam { get; private set; }
     public event Action<Team> onTeamChanged;
+    private bool canChangeTeam;
 
+    public void ToggleCanChangeTeam(bool toggle)
+    {
+        canChangeTeam = toggle;
+    }
 
     public override void OnAwake()
     {
@@ -20,6 +25,8 @@ public class TeamManager : BaseManager
 
     private void InputManager_onSpaceInput()
     {
+        if (!canChangeTeam) return;
+
         switch (currentTeam)
         {
             case Team.Red:

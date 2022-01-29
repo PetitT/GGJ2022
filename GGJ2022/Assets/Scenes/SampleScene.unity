@@ -1297,7 +1297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c693c23a458aa641ab67b76bf36d07a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprites:
+  blueSprites:
   - {fileID: 7970703210985263825, guid: cad66e7220ed74646a50c0b28f9d18bc, type: 3}
   - {fileID: -6185176286690949333, guid: cad66e7220ed74646a50c0b28f9d18bc, type: 3}
   - {fileID: 7962095052096930084, guid: cad66e7220ed74646a50c0b28f9d18bc, type: 3}
@@ -1305,7 +1305,16 @@ MonoBehaviour:
   - {fileID: 574142333857795211, guid: cad66e7220ed74646a50c0b28f9d18bc, type: 3}
   - {fileID: 1787581558072487263, guid: cad66e7220ed74646a50c0b28f9d18bc, type: 3}
   - {fileID: 3636732417190485814, guid: cad66e7220ed74646a50c0b28f9d18bc, type: 3}
+  redSprites:
+  - {fileID: 6603801332431591183, guid: bf0d27d9c7ab6f9419073fc80997d40c, type: 3}
+  - {fileID: -8546623600047901240, guid: bf0d27d9c7ab6f9419073fc80997d40c, type: 3}
+  - {fileID: 2705541285387730935, guid: bf0d27d9c7ab6f9419073fc80997d40c, type: 3}
+  - {fileID: 3829467701512175912, guid: bf0d27d9c7ab6f9419073fc80997d40c, type: 3}
+  - {fileID: 2726699481823534952, guid: bf0d27d9c7ab6f9419073fc80997d40c, type: 3}
+  - {fileID: 6543962635734303611, guid: bf0d27d9c7ab6f9419073fc80997d40c, type: 3}
+  - {fileID: 8337812763534061983, guid: bf0d27d9c7ab6f9419073fc80997d40c, type: 3}
   speed: 15
+  transitionSpeed: 10
 --- !u!1001 &5128622923208845996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1328,7 +1337,7 @@ PrefabInstance:
     - target: {fileID: 5128622922285053853, guid: bb2e8e0e9e1e0c64d985d548b824672d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 3099323926738821525, guid: cad66e7220ed74646a50c0b28f9d18bc, type: 3}
+      objectReference: {fileID: 3829467701512175912, guid: bf0d27d9c7ab6f9419073fc80997d40c, type: 3}
     - target: {fileID: 5128622922285053853, guid: bb2e8e0e9e1e0c64d985d548b824672d, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1

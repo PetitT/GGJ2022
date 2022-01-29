@@ -12,6 +12,9 @@ public class FeedbackData : ScriptableObject
     public AudioClip playerDamage;
     public AudioClip playerExplosion;
 
+    [Header("Effects")]
+    public GameObject explosion;
+
     public static FeedbackData GetFeedbackData()
     {
         return Resources.Load<FeedbackData>("FeedbackData");
