@@ -12,6 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bb0351163fdbe3479871d50994c0432, type: 3}
   m_Name: Pointed AI
   m_EditorClassIdentifier: 
-  self: {fileID: 0}
-  target: {fileID: 0}
-  speed: 1
+  speed: 3
