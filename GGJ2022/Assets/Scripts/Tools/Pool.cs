@@ -46,8 +46,8 @@ public class Pool : Singleton<Pool>
             newItem.transform.SetParent(transform);
             pool[item].Add(newItem);
         }
-        newItem.SetActive(true);
         newItem.transform.position = position;
+        newItem.SetActive(true);
 
         return newItem;
     }

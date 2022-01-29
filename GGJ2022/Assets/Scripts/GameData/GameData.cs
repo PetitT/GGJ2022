@@ -26,6 +26,7 @@ public class GameData : ScriptableObject
 
     [Header("Enemies")]
     public int EnnemyMaxHealth;
+    public int ScorePerKill;
 
     [Header("Enemies Spawn")]
     public List<GameObject> EnemiesList;

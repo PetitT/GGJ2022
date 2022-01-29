@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -20,6 +22,7 @@ public class GameManager : Singleton<GameManager>
     public TeamDisplayManager TeamDisplayManager = new TeamDisplayManager();
     public CombatManager CombatManager = new CombatManager();
     public EnemySpawnManager EnemySpawnManager = new EnemySpawnManager();
+    public ScoreManager ScoreManager = new ScoreManager();
 
     private void Awake()
     {
@@ -32,8 +35,16 @@ public class GameManager : Singleton<GameManager>
         managers.Add(TeamDisplayManager);
         managers.Add(CombatManager);
         managers.Add(EnemySpawnManager);
+        managers.Add(ScoreManager);
 
         managers.ForEach(t => t.OnAwake());
+
+        HealthManager.onDeath += EndGame;
+    }
+
+    private void OnDestroy()
+    {
+        HealthManager.onDeath -= EndGame;
     }
 
     private void Start()
@@ -44,6 +55,16 @@ public class GameManager : Singleton<GameManager>
     private void Update()
     {
         managers.ForEach(t => t.OnUpdate());
+    }
+
+    private async void EndGame()
+    {
+        managers.Remove(InputManager);
+        managers.Remove(CombatManager);
+        Character.SetActive(false);
+        Laser.SetActive(false);
+        await Task.Delay(2000);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
 }
