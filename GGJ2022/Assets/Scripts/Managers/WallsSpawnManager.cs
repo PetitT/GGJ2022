@@ -6,8 +6,19 @@ public class WallsSpawnManager : BaseManager
 {
     private Vector2 timeBetweenSpawns => gameData.TimeBetweenWallsSpawns;
     private float remainingTimeToWall;
+
+    public override void OnAwake()
+    {
+        remainingTimeToWall = 5f;
+    }
+
     public override void OnUpdate()
     {
-        base.OnUpdate();
+        Timer.LoopedCountDown(ref remainingTimeToWall, timeBetweenSpawns.RandomRange(), SpawnWall);
+    }
+
+    private void SpawnWall()
+    {
+
     }
 }
