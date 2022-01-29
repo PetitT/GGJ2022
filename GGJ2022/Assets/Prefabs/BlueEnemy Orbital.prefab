@@ -15,6 +15,10 @@ PrefabInstance:
       propertyPath: AI
       value: 
       objectReference: {fileID: 11400000, guid: 39bd9b3a1e5accf4485682bbe5a1b650, type: 2}
+    - target: {fileID: 1283424315923127194, guid: a39f918478dd6064fa2e551fd19e9566, type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1283424315923127195, guid: a39f918478dd6064fa2e551fd19e9566, type: 3}
       propertyPath: m_RootOrder
       value: 0
