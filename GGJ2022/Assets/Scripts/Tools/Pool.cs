@@ -42,12 +42,14 @@ public class Pool : Singleton<Pool>
 
         if (!newItem)
         {
-            newItem = Instantiate(item);
-            newItem.transform.SetParent(transform);
+            newItem = Instantiate(item, position, Quaternion.identity, transform);
             pool[item].Add(newItem);
         }
-        newItem.transform.position = position;
-        newItem.SetActive(true);
+        else
+        {
+            newItem.transform.position = position;
+            newItem.SetActive(true);
+        }
 
         return newItem;
     }

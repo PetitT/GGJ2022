@@ -11,10 +11,10 @@ public class ScoreManager : BaseManager
 
     public override void OnAwake()
     {
-        
+        Enemy.onDeath += AddScore;
     }
 
-    private void AddScore()
+    public void AddScore()
     {
         currentScore += scorePerKill;
         onScoreChanged?.Invoke(currentScore);

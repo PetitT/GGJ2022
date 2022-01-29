@@ -11,7 +11,6 @@ public class PointedAI : BaseAI
         base.Initialize(self, target);
 
         direction = Vector3.Normalize(target.position - self.position);
-        Debug.Log(target.position + " " + self.position + " " + direction);
     }
 
     public override void Execute()

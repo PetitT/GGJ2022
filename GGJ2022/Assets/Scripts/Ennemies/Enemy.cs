@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public static event Action onDeath;
+
     private Health health;
     private TeamedObject teamedObject;
     public BaseAI AI;
@@ -37,6 +40,7 @@ public class Enemy : MonoBehaviour
     private void Health_onDeath()
     {
         gameObject.SetActive(false);
+        onDeath?.Invoke();
     }
 
     public void Collide(TeamedObject obj)
