@@ -1,13 +1,28 @@
 fileFormatVersion: 2
-guid: bb36489cc632ac84586947bc59ad1b5a
+guid: bf0d27d9c7ab6f9419073fc80997d40c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8634173621082193765
-    second: enemiTest_0
+      213: 3829467701512175912
+    second: redspritesheet_0
   - first:
-      213: -2804359148306085845
-    second: enemiTest_1
+      213: 2726699481823534952
+    second: redspritesheet_1
+  - first:
+      213: 2705541285387730935
+    second: redspritesheet_2
+  - first:
+      213: -8546623600047901240
+    second: redspritesheet_3
+  - first:
+      213: 6543962635734303611
+    second: redspritesheet_4
+  - first:
+      213: 8337812763534061983
+    second: redspritesheet_5
+  - first:
+      213: 6603801332431591183
+    second: redspritesheet_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -52,7 +67,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 250
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -145,13 +160,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemiTest_0
+      name: redspritesheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 411.5
-        height: 453
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56ff6ad992fb2d770800000000000000
-      internalID: 8634173621082193765
+      spriteID: 821077bc590052530800000000000000
+      internalID: 3829467701512175912
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemiTest_1
+      name: redspritesheet_1
       rect:
         serializedVersion: 2
-        x: 411
-        y: 0
-        width: 411.5
-        height: 453
+        x: 512
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,8 +195,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b284996763ae419d0800000000000000
-      internalID: -2804359148306085845
+      spriteID: 86f55576bbe27d520800000000000000
+      internalID: 2726699481823534952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redspritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff70b8e6730c8520800000000000000
+      internalID: 2705541285387730935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redspritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c5bc222e1b446980800000000000000
+      internalID: -8546623600047901240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redspritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b734f568853d0da50800000000000000
+      internalID: 6543962635734303611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redspritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f917a26688cd5b370800000000000000
+      internalID: 8337812763534061983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redspritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0716dac25a65ab50800000000000000
+      internalID: 6603801332431591183
       vertices: []
       indices: 
       edges: []
@@ -189,7 +309,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 397674915dceca944b847c22d8b8c452
+    spriteID: c135837a5b778a14fb2ef06d375075f7
     internalID: 0
     vertices: []
     indices: 
