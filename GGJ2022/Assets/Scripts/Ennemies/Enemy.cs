@@ -25,6 +25,9 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         AI.Execute();
+
+        if (!GameManager.Instance.CameraBordermanager.IsWithinScreenBounds(transform.position, 5.0f))
+            gameObject.SetActive(false);
     }
 
     private void OnEnable()
