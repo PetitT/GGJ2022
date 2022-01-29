@@ -15,7 +15,7 @@ public class MovementManager : BaseManager
     private float targetSpeed;
 
     private Vector2 currentDirection;
-    private Vector2 targetDirection;
+    public Vector2 targetDirection { get; private set; }
 
     public override void OnAwake()
     {
