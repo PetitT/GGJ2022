@@ -25,7 +25,6 @@ public class GameData : ScriptableObject
     public float LaserTickRate;
 
     [Header("Enemies")]
-    public int EnnemyMaxHealth;
     public int ScorePerKill;
 
     [Header("Enemies Spawn")]
