@@ -21,6 +21,9 @@ public class GameData : ScriptableObject
     public float LaserSpeed;
     public float LaserScale;
 
+    [Header("Ennemies")]
+    public int EnnemyMaxHealth;
+
     public static GameData GetGameData()
     {
         return Resources.Load<GameData>("GameData");

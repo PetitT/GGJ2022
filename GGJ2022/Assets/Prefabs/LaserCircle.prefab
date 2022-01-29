@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4662199112766811929}
   - component: {fileID: 955643166165749880}
+  - component: {fileID: 5178930397839829999}
   m_Layer: 0
   m_Name: LaserCircle
   m_TagString: Untagged
@@ -82,3 +83,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5178930397839829999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7918628563357973175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5682b2a61170af54985f382dc24837a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentTeam: 1
