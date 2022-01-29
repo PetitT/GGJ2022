@@ -34,6 +34,32 @@ MonoBehaviour:
   - {fileID: 1618203245834071288, guid: aa7429192215a224980c2e7b1c75a693, type: 3}
   - {fileID: 7844853041393696202, guid: d795ed1814e8ca34e8a055c519cddd9e, type: 3}
   EnemiesSpawnRate: 0.25
+  WallSpeedCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.017547607
+      value: 0.49752808
+      inSlope: -3.2317913
+      outSlope: -3.2317913
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.0651206
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  WallSpeed: 5
+  TimeBetweenSpawns: {x: 3, y: 10}
   ScreenShakeTimeInMiliseconds: 300
   ScreenShakeAmplitude: 2
   ScreenShakeFrequency: 2
