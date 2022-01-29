@@ -52,6 +52,10 @@ public class Enemy : MonoBehaviour
             if (health.CurrentHealth > 0)
             {
                 SoundManager.Instance.PlayClip(GameManager.Instance.feedbackData.enemyExplosion);
+                Vector2 explosionPosition = transform.position /*+ (GameManager.Instance.Character.transform.position - transform.position).normalized*/;
+                GameObject Explosion = Pool.Instance.GetItemFromPool(GameManager.Instance.feedbackData.explosion, explosionPosition);
+                Vector2 direction = (GameManager.Instance.Character.transform.position - transform.position).normalized;
+                Explosion.transform.up = direction;
             }
         }
     }

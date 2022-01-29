@@ -17,3 +17,4 @@ MonoBehaviour:
   enemyDeath: {fileID: 8300000, guid: 7a602f7988061914eb135ecd8a9d2940, type: 3}
   playerDamage: {fileID: 8300000, guid: 1ebea993676a8ed4f88f6f9f25b10f62, type: 3}
   playerExplosion: {fileID: 8300000, guid: 562f625b1231614449e10a2bb8c64692, type: 3}
+  explosion: {fileID: 8919931267150954655, guid: d6f5e522140dbcb469eb2a6c032da9c6, type: 3}
