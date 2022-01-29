@@ -22,11 +22,16 @@ public class HealthManager : BaseManager
     private void Health_onHealthChanged(int obj)
     {
         onHealthChanged?.Invoke(obj);
+        if (obj != 0)
+        {
+            SoundManager.Instance.PlayClip(gameManager.feedbackData.playerDamage);
+        }
     }
 
     private void Health_onDeath()
     {
         onDeath?.Invoke();
+        SoundManager.Instance.PlayClip(gameManager.feedbackData.playerExplosion);
     }
     public void TakeDamage(int damage)
     {

@@ -41,6 +41,7 @@ public class Enemy : MonoBehaviour
     {
         gameObject.SetActive(false);
         onDeath?.Invoke();
+        SoundManager.Instance.PlayClip(GameManager.Instance.feedbackData.enemyDeath);
     }
 
     public void Collide(TeamedObject obj)
@@ -48,6 +49,10 @@ public class Enemy : MonoBehaviour
         if (obj.currentTeam != teamedObject.currentTeam)
         {
             health.TakeDamage(1);
+            if (health.CurrentHealth > 0)
+            {
+                SoundManager.Instance.PlayClip(GameManager.Instance.feedbackData.enemyExplosion);
+            }
         }
     }
 
