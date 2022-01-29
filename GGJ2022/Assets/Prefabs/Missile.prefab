@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5628272458467331245}
   - component: {fileID: 194020226663704208}
   - component: {fileID: 5553309517259116559}
+  - component: {fileID: -5168435497518664979}
   m_Layer: 0
   m_Name: Missile
   m_TagString: Untagged
@@ -117,7 +118,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -148,3 +149,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTeam: 0
+--- !u!114 &-5168435497518664979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8911457259003707490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d30bbf4477a9260439349c66710ca1a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deactivateOnCollision: 1

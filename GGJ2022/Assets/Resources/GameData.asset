@@ -22,4 +22,6 @@ MonoBehaviour:
   MissilesSpeed: 20
   LaserSpeed: 14.99
   LaserScale: 20
-  EnnemyMaxHealth: 0
+  LaserTickRate: 1
+  LaserToggleTime: 0.1
+  EnnemyMaxHealth: 10

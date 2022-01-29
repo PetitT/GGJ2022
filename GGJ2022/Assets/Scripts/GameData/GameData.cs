@@ -20,6 +20,8 @@ public class GameData : ScriptableObject
     [Header("Laser")]
     public float LaserSpeed;
     public float LaserScale;
+    public float LaserTickRate;
+    public float LaserToggleTime;
 
     [Header("Ennemies")]
     public int EnnemyMaxHealth;
