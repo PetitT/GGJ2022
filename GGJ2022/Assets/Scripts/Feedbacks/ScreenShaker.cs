@@ -1,0 +1,40 @@
+using Cinemachine;
+using System.Collections;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using UnityEngine;
+
+public class ScreenShaker : MonoBehaviour
+{
+    [SerializeField] private CinemachineVirtualCamera cam;
+    private CinemachineBasicMultiChannelPerlin perlin;
+
+    private float amplitude => GameManager.Instance.Data.ScreenShakeAmplitude;
+    private float frequency => GameManager.Instance.Data.ScreenShakeFrequency;
+    private int time => GameManager.Instance.Data.ScreenShakeTimeInMiliseconds;
+
+    private void Start()
+    {
+        perlin = cam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+        GameManager.Instance.HealthManager.onHealthChanged += HealthManager_onHealthChanged;
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.Instance.HealthManager.onHealthChanged -= HealthManager_onHealthChanged;
+    }
+
+    private void HealthManager_onHealthChanged(int obj)
+    {
+        ShakeScreen();
+    }
+
+    private async void ShakeScreen()
+    {
+        perlin.m_AmplitudeGain = amplitude;
+        perlin.m_FrequencyGain = frequency;
+        await Task.Delay(time);
+        perlin.m_AmplitudeGain = 0;
+        perlin.m_FrequencyGain = 0;
+    }
+}

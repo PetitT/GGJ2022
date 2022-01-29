@@ -31,6 +31,11 @@ public class GameData : ScriptableObject
     public List<GameObject> EnemiesList;
     public float EnemiesSpawnRate;
 
+    [Header("FeedBacks")]
+    public int ScreenShakeTimeInMiliseconds;
+    public float ScreenShakeAmplitude;
+    public float ScreenShakeFrequency;
+
     public static GameData GetGameData()
     {
         return Resources.Load<GameData>("GameData");
