@@ -41,6 +41,7 @@ public class Enemy : MonoBehaviour
     {
         gameObject.SetActive(false);
         onDeath?.Invoke();
+        SoundManager.Instance.PlayClip(GameManager.Instance.feedbackData.enemyExplosion);
     }
 
     public void Collide(TeamedObject obj)
