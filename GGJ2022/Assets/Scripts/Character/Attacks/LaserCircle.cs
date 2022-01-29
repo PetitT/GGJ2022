@@ -61,13 +61,13 @@ public class LaserCircle : BaseAttack
 
     private void CheckCloseEnnemies()
     {
-        List<Collider2D> ennemies = Physics2D.OverlapCircleAll(laser.transform.position, maxHitDistance).Where(t => t.GetComponent<EnnemyManager>()).ToList();
+        List<Collider2D> ennemies = Physics2D.OverlapCircleAll(laser.transform.position, maxHitDistance).Where(t => t.GetComponent<Enemy>()).ToList();
         for (int i = 0; i < ennemies.Count; i++)
         {
             float distance = Vector2.Distance(ennemies[i].transform.position, laser.transform.position);
             if(distance > minHitDistance)
             {
-                ennemies[i].GetComponent<EnnemyManager>().Collide(teamedObject);
+                ennemies[i].GetComponent<Enemy>().Collide(teamedObject);
             }
         }        
     }

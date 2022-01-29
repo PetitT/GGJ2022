@@ -13,7 +13,7 @@ public class ProjectileCollision : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent(out EnnemyManager ennemy))
+        if (collision.TryGetComponent(out Enemy ennemy))
         {
             ennemy.Collide(teamedObject);
             gameObject.SetActive(false);
