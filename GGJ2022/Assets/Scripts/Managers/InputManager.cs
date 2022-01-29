@@ -19,8 +19,8 @@ public class InputManager : BaseManager
 
     private void CheckMovementInput()
     {
-        XInput = Input.GetAxis("Horizontal");
-        YInput = Input.GetAxis("Vertical");
+        XInput = Input.GetAxisRaw("Horizontal");
+        YInput = Input.GetAxisRaw("Vertical");
 
         onMove?.Invoke(new Vector2(XInput, YInput));
     }

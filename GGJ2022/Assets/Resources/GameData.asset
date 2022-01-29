@@ -13,5 +13,11 @@ MonoBehaviour:
   m_Name: GameData
   m_EditorClassIdentifier: 
   CharacterSpeed: 10
-  CharacterAcceleration: 5
+  CharacterAcceleration: 40
   CharacterHalfSize: 0.2
+  CharacterMaxHealth: 3
+  Missile: {fileID: 8911457259003707490, guid: 0014a986065765043ab3ffcfd2cd2c85, type: 3}
+  MissileFireRate: 0.1
+  MissilesSpeed: 20
+  LaserSpeed: 10
+  LaserScale: 20
