@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63416570cbc35404db90f8d76880612a, type: 3}
-  m_Name: Linear AI
+  m_Name: Linear Down AI
   m_EditorClassIdentifier: 
   speed: 1
-  direction: {x: 0, y: 1}
+  direction: {x: 0, y: -1}
