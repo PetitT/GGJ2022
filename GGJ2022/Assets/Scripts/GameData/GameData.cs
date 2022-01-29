@@ -33,6 +33,7 @@ public class GameData : ScriptableObject
     public float EnemiesSpawnRate;
 
     [Header("Walls")]
+    public List<GameObject> Walls;
     public AnimationCurve WallSpeedCurve;
     public float WallSpeed;
     public Vector2 TimeBetweenWallsSpawns;
