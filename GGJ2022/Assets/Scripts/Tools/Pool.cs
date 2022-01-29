@@ -26,6 +26,7 @@ public class Pool : Singleton<Pool>
         {
             GameObject newItem = Instantiate(item);
             newItem.SetActive(false);
+            newItem.transform.SetParent(transform);
             pool[item].Add(newItem);
         }
     }
@@ -42,10 +43,11 @@ public class Pool : Singleton<Pool>
         if (!newItem)
         {
             newItem = Instantiate(item);
+            newItem.transform.SetParent(transform);
             pool[item].Add(newItem);
         }
-        newItem.SetActive(true);
         newItem.transform.position = position;
+        newItem.SetActive(true);
 
         return newItem;
     }

@@ -26,10 +26,16 @@ public class GameData : ScriptableObject
 
     [Header("Enemies")]
     public int EnnemyMaxHealth;
+    public int ScorePerKill;
 
     [Header("Enemies Spawn")]
     public List<GameObject> EnemiesList;
     public float EnemiesSpawnRate;
+
+    [Header("FeedBacks")]
+    public int ScreenShakeTimeInMiliseconds;
+    public float ScreenShakeAmplitude;
+    public float ScreenShakeFrequency;
 
     public static GameData GetGameData()
     {
