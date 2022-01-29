@@ -12,6 +12,9 @@ public class GameManager : Singleton<GameManager>
     private GameData data;
     public GameData Data => data ??= GameData.GetGameData();
 
+    private FeedbackData _feedbackData;
+    public FeedbackData feedbackData => _feedbackData ??= FeedbackData.GetFeedbackData();
+
     private List<BaseManager> managers = new List<BaseManager>();
     public InputManager InputManager = new InputManager();
     public HealthManager HealthManager = new HealthManager();
