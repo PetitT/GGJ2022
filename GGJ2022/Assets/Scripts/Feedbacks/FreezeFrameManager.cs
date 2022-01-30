@@ -12,7 +12,7 @@ public class FreezeFrameManager : MonoBehaviour
 
     private void HealthManager_onHealthChanged(int obj)
     {
-        FreezeFrame();
+       // FreezeFrame();
     }
 
     private async void FreezeFrame()
