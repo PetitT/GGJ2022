@@ -20,7 +20,7 @@ public class TeamManager : BaseManager
     }
     public override void OnBegin()
     {
-        SwapTeam(Team.Red);
+        SwapTeam(Team.Blue);
     }
 
     private void InputManager_onSpaceInput()

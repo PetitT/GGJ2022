@@ -38,7 +38,10 @@ public class GameData : ScriptableObject
     [Header("FeedBacks")]
     public int ScreenShakeTimeInMiliseconds;
     public float ScreenShakeAmplitude;
-    public float ScreenShakeFrequency;
+    public float ScreenShakeFrequency; 
+    public int BigScreenShakeTimeInMiliseconds;
+    public float BigScreenShakeAmplitude;
+    public float BigScreenShakeFrequency;
 
     public static GameData GetGameData()
     {

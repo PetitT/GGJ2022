@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ public class GameManager : Singleton<GameManager>
 {
     public GameObject Character;
     public GameObject Laser;
+    public SpriteRenderer Fade;
 
     private GameData data;
     public GameData Data => data ??= GameData.GetGameData();
@@ -27,6 +29,8 @@ public class GameManager : Singleton<GameManager>
     public EnemySpawnManager EnemySpawnManager = new EnemySpawnManager();
     public WallsSpawnManager WallsSpawnManager = new WallsSpawnManager();
     public ScoreManager ScoreManager = new ScoreManager();
+
+    private bool hasGameStarted;
 
     private void Awake()
     {
@@ -54,22 +58,46 @@ public class GameManager : Singleton<GameManager>
 
     private void Start()
     {
+        StartBeginAnimation();
+    }
+
+    private void StartGame()
+    {
         managers.ForEach(t => t.OnBegin());
+        hasGameStarted = true;
     }
 
     private void Update()
     {
-        managers.ForEach(t => t.OnUpdate());
+        if (hasGameStarted)
+        {
+            managers.ForEach(t => t.OnUpdate());
+        }
     }
 
-    private async void EndGame()
+    private void EndGame()
     {
         managers.Remove(InputManager);
         managers.Remove(CombatManager);
         Character.SetActive(false);
         Laser.SetActive(false);
-        await Task.Delay(2000);
+    }
+
+    public void Restart()
+    {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private void StartBeginAnimation()
+    {
+        Fade.color = new Color(Fade.color.r, Fade.color.g, Fade.color.b, 1);
+        Fade.DOColor(new Color(Fade.color.r, Fade.color.g, Fade.color.b, 0), 1f);
+        Character.GetComponent<TrailRenderer>().Clear();
+        Character.GetComponent<TrailRenderer>().enabled = false;
+        Character.GetComponent<TrailRenderer>().enabled = true;
+
+        Character.transform.position = new Vector2(0, -7);
+        Character.transform.DOMoveY(0, 3).OnComplete(StartGame);
     }
 
 }
