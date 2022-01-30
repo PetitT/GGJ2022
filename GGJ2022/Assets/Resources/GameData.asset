@@ -25,7 +25,6 @@ MonoBehaviour:
   LaserMaxHitDistance: 2
   LaserMinHitDistance: 1.5
   LaserTickRate: 0.1
-  EnnemyMaxHealth: 3
   ScorePerKill: 5
   EnemiesList:
   - {fileID: 1741621471574320076, guid: 9fe2bafa45ea3da44b7f38e3b56621c5, type: 3}
@@ -33,7 +32,12 @@ MonoBehaviour:
   - {fileID: 1283424315923127193, guid: a39f918478dd6064fa2e551fd19e9566, type: 3}
   - {fileID: 1618203245834071288, guid: aa7429192215a224980c2e7b1c75a693, type: 3}
   - {fileID: 7844853041393696202, guid: d795ed1814e8ca34e8a055c519cddd9e, type: 3}
-  EnemiesSpawnRate: 0.25
+  - {fileID: 2175444198998845130, guid: 79d6d195d3b6bbc4fa6d28a0a2b4a23f, type: 3}
+  - {fileID: 7066113961304838308, guid: e5c6108a2079bee4ebdd888e63ff0d6a, type: 3}
+  - {fileID: 4689516126741554427, guid: 8c050de0e0575234bad4260441294b1e, type: 3}
+  - {fileID: 6430385225286366202, guid: 72d26660b9bb65045a7d2021c1cd0dd1, type: 3}
+  - {fileID: 2326749334201416463, guid: 5f3ad601ad9bca248a3ad96c5511200c, type: 3}
+  EnemiesSpawnRate: 1
   Walls:
   - {fileID: 1840515201159431778, guid: ee2d5818acc14b642bbf360812a3db8f, type: 3}
   - {fileID: 1840515201159431778, guid: e635396e83118d94d8d3e8dfca934bc3, type: 3}
