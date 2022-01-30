@@ -16,10 +16,10 @@ MonoBehaviour:
   CharacterAcceleration: 50
   CharacterDirectionChangeAcceleration: 8
   CharacterHalfSize: 0.5
-  CharacterMaxHealth: 3
+  CharacterMaxHealth: 5
   InvulnerabilityTime: 1
   Missile: {fileID: 8911457259003707490, guid: 0014a986065765043ab3ffcfd2cd2c85, type: 3}
-  MissileFireRate: 0.1
+  MissileFireRate: 0.075
   MissilesSpeed: 20
   LaserSpeed: 12.5
   LaserScale: 8
