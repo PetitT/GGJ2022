@@ -924,7 +924,7 @@
     },
     "m_Name": "_Intensity",
     "m_DefaultReferenceName": "Vector1_edab033369fd4f0d93a872982bafe18c",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "_Intensity",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
