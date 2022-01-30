@@ -65,3 +65,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a39f918478dd6064fa2e551fd19e9566, type: 3}
+--- !u!1 &4689516126741554427 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1283424315923127193, guid: a39f918478dd6064fa2e551fd19e9566, type: 3}
+  m_PrefabInstance: {fileID: 5826287444090634082}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-517984102737098084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4689516126741554427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d25a693f99357b943bbde52392423278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocketPrefab: {fileID: 8911457259003707490, guid: fdd53d8e40f4b8a4cb6c595451f79c60, type: 3}
+  fireRate: 6
+  ammunition: 2
+  direction: 4
