@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class BackgroundAnimation : MonoBehaviour
 {
-    [SerializeField] private MeshRenderer meshRenderer;
+    [SerializeField] private MeshRenderer backgroundMesh;
     [SerializeField] private float offsetSpeed;
+
+    [SerializeField] private MeshRenderer gridMesh;
+    [SerializeField] private float gridOffsetSpeed;
+
     private float currentTexXOffset;
 
     private void Update()
     {
-        currentTexXOffset += Time.deltaTime * offsetSpeed;
-        meshRenderer.material.mainTextureOffset = new Vector2(0, currentTexXOffset);
+        currentTexXOffset += Time.deltaTime;
+        backgroundMesh.material.mainTextureOffset = new Vector2(0, currentTexXOffset * offsetSpeed);
+        gridMesh.material.mainTextureOffset = new Vector2(0, currentTexXOffset * gridOffsetSpeed);
     }
 }
