@@ -79,3 +79,6 @@ MonoBehaviour:
   ScreenShakeTimeInMiliseconds: 300
   ScreenShakeAmplitude: 2
   ScreenShakeFrequency: 2
+  BigScreenShakeTimeInMiliseconds: 3000
+  BigScreenShakeAmplitude: 3
+  BigScreenShakeFrequency: 4

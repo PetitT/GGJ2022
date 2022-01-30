@@ -36,7 +36,6 @@ public class ScreenShaker : MonoBehaviour
 
     private void HealthManager_onHealthChanged(int obj)
     {
-        Debug.Log(obj);
         if (obj != 3 && obj != 0)
         {
             ShakeScreen(amplitude, frequency, time);
@@ -45,7 +44,6 @@ public class ScreenShaker : MonoBehaviour
 
     private async void ShakeScreen(float amplitude, float frequency, int time)
     {
-        Debug.Log(string.Format("{0}, {1}, {2}", amplitude, frequency, time));
         perlin.m_AmplitudeGain = amplitude;
         perlin.m_FrequencyGain = frequency;
         await Task.Delay(time);
