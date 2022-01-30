@@ -16,8 +16,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 39bd9b3a1e5accf4485682bbe5a1b650, type: 2}
     - target: {fileID: 1283424315923127194, guid: a39f918478dd6064fa2e551fd19e9566, type: 3}
-      propertyPath: maxHealth
+      propertyPath: score
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283424315923127194, guid: a39f918478dd6064fa2e551fd19e9566, type: 3}
+      propertyPath: maxHealth
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1283424315923127195, guid: a39f918478dd6064fa2e551fd19e9566, type: 3}
       propertyPath: m_RootOrder
@@ -82,7 +86,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d25a693f99357b943bbde52392423278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rocketPrefab: {fileID: 8911457259003707490, guid: fdd53d8e40f4b8a4cb6c595451f79c60, type: 3}
+  rocketPrefab: {fileID: 8911457259003707490, guid: 1a528ecf9d73c4f43a8973e61f936454, type: 3}
   fireRate: 6
   ammunition: 2
   direction: 4

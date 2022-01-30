@@ -11,6 +11,14 @@ PrefabInstance:
       propertyPath: AI
       value: 
       objectReference: {fileID: 11400000, guid: 64bd66b4433a13546be9598f057a4df3, type: 2}
+    - target: {fileID: 1741621471574320066, guid: 9fe2bafa45ea3da44b7f38e3b56621c5, type: 3}
+      propertyPath: score
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741621471574320066, guid: 9fe2bafa45ea3da44b7f38e3b56621c5, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1741621471574320076, guid: 9fe2bafa45ea3da44b7f38e3b56621c5, type: 3}
       propertyPath: m_Name
       value: RedEnemy Down
@@ -78,7 +86,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d25a693f99357b943bbde52392423278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rocketPrefab: {fileID: 8911457259003707490, guid: 1a528ecf9d73c4f43a8973e61f936454, type: 3}
+  rocketPrefab: {fileID: 8911457259003707490, guid: fdd53d8e40f4b8a4cb6c595451f79c60, type: 3}
   fireRate: 3
   ammunition: -1
   direction: 1

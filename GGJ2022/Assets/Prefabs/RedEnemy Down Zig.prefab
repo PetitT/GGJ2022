@@ -11,9 +11,17 @@ PrefabInstance:
       propertyPath: AI
       value: 
       objectReference: {fileID: 11400000, guid: 6311ecfbfa3236345a45d3b4aa28469d, type: 2}
+    - target: {fileID: 1741621471574320066, guid: 9fe2bafa45ea3da44b7f38e3b56621c5, type: 3}
+      propertyPath: score
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741621471574320066, guid: 9fe2bafa45ea3da44b7f38e3b56621c5, type: 3}
+      propertyPath: maxHealth
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1741621471574320076, guid: 9fe2bafa45ea3da44b7f38e3b56621c5, type: 3}
       propertyPath: m_Name
-      value: RedEnemy UP Zig
+      value: RedEnemy Down Zig
       objectReference: {fileID: 0}
     - target: {fileID: 1741621471574320078, guid: 9fe2bafa45ea3da44b7f38e3b56621c5, type: 3}
       propertyPath: m_RootOrder
