@@ -36,7 +36,7 @@ public class ScreenShaker : MonoBehaviour
 
     private void HealthManager_onHealthChanged(int obj)
     {
-        if (obj != 3 && obj != 0)
+        if (obj != GameManager.Instance.Data.CharacterMaxHealth && obj != 0)
         {
             ShakeScreen(amplitude, frequency, time);
         }
