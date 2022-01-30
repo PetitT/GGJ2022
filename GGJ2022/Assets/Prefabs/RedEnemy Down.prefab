@@ -13,11 +13,11 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 64bd66b4433a13546be9598f057a4df3, type: 2}
     - target: {fileID: 1741621471574320066, guid: 9fe2bafa45ea3da44b7f38e3b56621c5, type: 3}
       propertyPath: score
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1741621471574320066, guid: 9fe2bafa45ea3da44b7f38e3b56621c5, type: 3}
       propertyPath: maxHealth
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1741621471574320076, guid: 9fe2bafa45ea3da44b7f38e3b56621c5, type: 3}
       propertyPath: m_Name
