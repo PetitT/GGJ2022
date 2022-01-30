@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 194020226663704208}
   - component: {fileID: 5553309517259116559}
   - component: {fileID: -5168435497518664979}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Missile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,4 +161,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30bbf4477a9260439349c66710ca1a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deactivateOnCollision: 1
