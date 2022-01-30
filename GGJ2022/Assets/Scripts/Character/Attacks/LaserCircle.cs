@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using UnityEngine;
+using DG.Tweening;
 
 public class LaserCircle : BaseAttack
 {
@@ -16,6 +17,7 @@ public class LaserCircle : BaseAttack
 
     private float tickRate => GameManager.Instance.Data.LaserTickRate;
     private float remainingTickRate;
+    private float rotationSpeed = 90f;
 
     private Collider2D col;
 
@@ -27,17 +29,18 @@ public class LaserCircle : BaseAttack
         teamedObject = laser.GetComponent<TeamedObject>();
         remainingTickRate = tickRate;
         col.enabled = false;
+        laser.transform.DOScale(scale, 0.15f);
     }
 
     public override void Stop()
     {
-        laser.SetActive(false);
+        laser.transform.DOScale(0, 0.15f);
     }
 
     public override void Update()
     {
         MoveTowardsPlayer();
-        UpdateScale();
+        RotateLaser();
         Timer.LoopedCountDown(ref remainingTickRate, tickRate, () =>
         {
             CheckCloseEnnemies();
@@ -54,9 +57,9 @@ public class LaserCircle : BaseAttack
         laser.transform.position = Vector2.MoveTowards(laser.transform.position, target, followSpeed * Time.deltaTime);
     }
 
-    private void UpdateScale()
+    private void RotateLaser()
     {
-        laser.transform.localScale = new Vector2(scale, scale);
+        laser.transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
     }
 
     private void CheckCloseEnnemies()
@@ -70,6 +73,5 @@ public class LaserCircle : BaseAttack
                 ennemies[i].GetComponent<Enemy>().Collide(teamedObject);
             }
         }        
-    }
-    
+    }    
 }

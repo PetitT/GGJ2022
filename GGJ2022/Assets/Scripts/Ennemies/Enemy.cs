@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,18 +10,19 @@ public class Enemy : MonoBehaviour
     public static event Action onDeath;
 
     public int maxHealth = 5;
-    private float intensityMultiplier = 1000;
 
     private Health health;
     private TeamedObject teamedObject;
     private SpriteRenderer sprite;
     public BaseAI AI;
+    private Color defaultColor;
 
     private void Awake()
     {
         health = new Health(maxHealth);
         teamedObject = GetComponent<TeamedObject>();
         sprite = GetComponentInChildren<SpriteRenderer>();
+        defaultColor = sprite.color;
         health.onDeath += Health_onDeath;
 
         AI = Instantiate(AI);
@@ -51,6 +53,7 @@ public class Enemy : MonoBehaviour
         gameObject.SetActive(false);
         onDeath?.Invoke();
         SoundManager.Instance.PlayClip(GameManager.Instance.feedbackData.enemyDeath);
+        SpawnBigExplosion();
     }
 
     public void Collide(TeamedObject obj)
@@ -62,7 +65,12 @@ public class Enemy : MonoBehaviour
             {
                 SoundManager.Instance.PlayClip(GameManager.Instance.feedbackData.enemyExplosion);
                 SpawnExplosion();
-                //AnimateMaterial();
+
+                Sequence s = DOTween.Sequence();
+
+                s.Append(sprite.material.DOColor(defaultColor * 10, 0.05f));
+                s.Append(sprite.material.DOColor(defaultColor, 0.05f));
+                s.Play();
             }
         }
     }
@@ -75,27 +83,9 @@ public class Enemy : MonoBehaviour
         Explosion.transform.up = direction;
     }
 
-    private async void AnimateMaterial()
+    private void SpawnBigExplosion()
     {
-        float currentIntensity = sprite.material.GetFloat("_Intensity");
-        while (currentIntensity < 100)
-        {
-            currentIntensity += Time.deltaTime * intensityMultiplier;
-            if (sprite != null)
-            {
-                sprite.material.SetFloat("_Intensity", currentIntensity);
-                await Task.Yield();
-            }
-        }
-        while (currentIntensity > 2)
-        {
-            currentIntensity -= Time.deltaTime * intensityMultiplier;
-            if (sprite != null)
-            {
-                sprite.material.SetFloat("_Intensity", currentIntensity);
-                await Task.Yield();
-            }
-        }
-        sprite.material.SetFloat("_Intensity", 2);
+        GameObject newExplosion = Pool.Instance.GetItemFromPool(GameManager.Instance.feedbackData.longExplosion, transform.position);
+        newExplosion.transform.Rotate(Vector3.forward * UnityEngine.Random.Range(0, 360));
     }
 }

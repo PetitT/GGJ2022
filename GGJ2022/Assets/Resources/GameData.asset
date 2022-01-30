@@ -20,10 +20,10 @@ MonoBehaviour:
   Missile: {fileID: 8911457259003707490, guid: 0014a986065765043ab3ffcfd2cd2c85, type: 3}
   MissileFireRate: 0.1
   MissilesSpeed: 20
-  LaserSpeed: 14.99
-  LaserScale: 20
-  LaserMaxHitDistance: 2
-  LaserMinHitDistance: 1.5
+  LaserSpeed: 12.5
+  LaserScale: 8
+  LaserMaxHitDistance: 3.5
+  LaserMinHitDistance: 2.2
   LaserTickRate: 0.1
   ScorePerKill: 5
   EnemiesList:

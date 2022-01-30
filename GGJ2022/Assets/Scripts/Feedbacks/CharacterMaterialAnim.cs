@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -23,7 +24,11 @@ public class CharacterMaterialAnim : MonoBehaviour
 
     private void HealthManager_onHealthChanged(int obj)
     {
-       // AnimateMaterial();
+        Sequence s = DOTween.Sequence();
+        s.Append(sprite.material.DOColor(defaultColor * 10, 0.05f));
+        s.Append(sprite.material.DOColor(defaultColor, 0.05f));
+        s.SetLoops(3);
+        s.Play();
     }
 
     private async void AnimateMaterial()
