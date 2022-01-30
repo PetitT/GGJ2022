@@ -17,17 +17,22 @@ public class EnemySpawnManager : BaseManager
     {
         var prefab = enemiesList.GetRandom();
 
-        if (!prefab.CompareTag("Wave"))
+        if (prefab.CompareTag("Wave"))
         {
-            Vector2 spawnPosition = gameManager.CameraBordermanager.GetRandomPointOnScreenBorder(EnumExtensions.GetRandomEnum<ScreenBorderSide>(), 1);
-            GameObject newMinion = Pool.Instance.GetItemFromPool(prefab, spawnPosition);
+            foreach (Transform item in prefab.transform)
+                Pool.Instance.GetItemFromPool(item.gameObject, item.position);
         }
         else
         {
-            foreach (Transform item in prefab.transform)
-            {
-                Pool.Instance.GetItemFromPool(item.gameObject, item.position);
-            }
+            ScreenBorderSide side;
+
+            if (prefab.GetComponent<TeamedObject>().currentTeam == Team.Blue)
+                side = Random.value > 0.5f ? ScreenBorderSide.Left : ScreenBorderSide.Right;
+            else
+                side = Random.value > 0.5f ? ScreenBorderSide.Top : ScreenBorderSide.Bottom;
+
+            Vector2 spawnPosition = gameManager.CameraBordermanager.GetRandomPointOnScreenBorder(side, 1);
+            GameObject newMinion = Pool.Instance.GetItemFromPool(prefab, spawnPosition);
         }
     }
 }
