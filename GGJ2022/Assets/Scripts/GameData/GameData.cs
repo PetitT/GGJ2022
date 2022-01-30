@@ -11,6 +11,7 @@ public class GameData : ScriptableObject
     public float CharacterDirectionChangeAcceleration;
     public float CharacterHalfSize;
     public int CharacterMaxHealth;
+    public float InvulnerabilityTime;
 
     [Header("Missiles")]
     public GameObject Missile;

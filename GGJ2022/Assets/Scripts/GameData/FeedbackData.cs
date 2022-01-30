@@ -11,11 +11,15 @@ public class FeedbackData : ScriptableObject
     public AudioClip enemyDeath;
     public AudioClip playerDamage;
     public AudioClip playerExplosion;
+    public AudioClip switchToRed;
+    public AudioClip switchToBlue;
 
     [Header("Effects")]
     public GameObject explosion;
     public GameObject longExplosion;
     public GameObject scoreNumber;
+    public GameObject blueElectricity;
+    public GameObject redElectricity;
 
     public static FeedbackData GetFeedbackData()
     {
