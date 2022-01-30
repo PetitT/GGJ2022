@@ -8,7 +8,7 @@ public class CharacterMaterialAnim : MonoBehaviour
 {
     private SpriteRenderer sprite;
     private Color defaultColor;
-    private float intensityMultiplier = 200;
+    public float maximumIntensity = 5;
 
     private void Start()
     {
@@ -25,35 +25,9 @@ public class CharacterMaterialAnim : MonoBehaviour
     private void HealthManager_onHealthChanged(int obj)
     {
         Sequence s = DOTween.Sequence();
-        s.Append(sprite.material.DOColor(defaultColor * 10, 0.05f));
+        s.Append(sprite.material.DOColor(defaultColor * maximumIntensity, 0.05f));
         s.Append(sprite.material.DOColor(defaultColor, 0.05f));
         s.SetLoops(3);
         s.Play();
-    }
-
-    private async void AnimateMaterial()
-    {
-        float currentIntensity = 0;
-        while (currentIntensity < 10)
-        {
-            currentIntensity += Time.deltaTime * intensityMultiplier;
-            if (sprite != null)
-            {
-                Color newColor = defaultColor * currentIntensity;
-                sprite.material.color = newColor;
-                await Task.Yield();
-            }
-        }
-        while (currentIntensity > 0)
-        {
-            currentIntensity -= Time.deltaTime * intensityMultiplier;
-            if (sprite != null)
-            {
-                Color newColor = defaultColor * currentIntensity;
-                sprite.material.color = newColor;
-                await Task.Yield();
-            }
-        }
-        sprite.material.color = defaultColor;
     }
 }
