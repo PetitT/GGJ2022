@@ -19,22 +19,19 @@ public class LaserCircle : BaseAttack
     private float remainingTickRate;
     private float rotationSpeed = 90f;
 
-    private Collider2D col;
 
     public override void Begin()
     {
         laser.SetActive(true);
         laser.transform.position = GameManager.Instance.Character.transform.position;
-        col = laser.GetComponent<Collider2D>();
         teamedObject = laser.GetComponent<TeamedObject>();
         remainingTickRate = tickRate;
-        col.enabled = false;
         laser.transform.DOScale(scale, 0.15f);
     }
 
     public override void Stop()
     {
-        laser.transform.DOScale(0, 0.15f);
+        laser.transform.DOScale(0, 0.15f).OnComplete(() => laser.SetActive(false));
     }
 
     public override void Update()
@@ -68,10 +65,10 @@ public class LaserCircle : BaseAttack
         for (int i = 0; i < ennemies.Count; i++)
         {
             float distance = Vector2.Distance(ennemies[i].transform.position, laser.transform.position);
-            if(distance > minHitDistance)
+            if (distance > minHitDistance)
             {
                 ennemies[i].GetComponent<Enemy>().Collide(teamedObject);
             }
-        }        
-    }    
+        }
+    }
 }
