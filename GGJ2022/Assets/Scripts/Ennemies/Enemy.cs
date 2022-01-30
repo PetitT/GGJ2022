@@ -65,7 +65,6 @@ public class Enemy : MonoBehaviour
                 SoundManager.Instance.PlayClip(GameManager.Instance.feedbackData.enemyExplosion);
                 SpawnExplosion();
                 materialChangeTask = AnimateMaterial();
-
             }
         }
     }
@@ -83,23 +82,24 @@ public class Enemy : MonoBehaviour
         float currentIntensity = sprite.material.GetFloat("_Intensity");
         while (currentIntensity < 100)
         {
+            currentIntensity += Time.deltaTime * intensityMultiplier;
             if (sprite != null)
             {
-                currentIntensity += Time.deltaTime * intensityMultiplier;
                 sprite.material.SetFloat("_Intensity", currentIntensity);
                 await Task.Yield();
             }
         }
         while (currentIntensity > 2)
         {
+            currentIntensity -= Time.deltaTime * intensityMultiplier;
             if (sprite != null)
             {
-                currentIntensity -= Time.deltaTime * intensityMultiplier;
                 sprite.material.SetFloat("_Intensity", currentIntensity);
                 await Task.Yield();
             }
         }
 
+        Debug.Log("hiku");
         sprite.material.SetFloat("_Intensity", 2);
     }
 }
