@@ -15,7 +15,19 @@ public class EnemySpawnManager : BaseManager
 
     private void SpawnMinion()
     {
-        Vector2 spawnPosition = gameManager.CameraBordermanager.GetRandomPointOnScreenBorder(EnumExtensions.GetRandomEnum<ScreenBorderSide>(), 1);
-        GameObject newMinion = Pool.Instance.GetItemFromPool(enemiesList.GetRandom(), spawnPosition);
+        var prefab = enemiesList.GetRandom();
+
+        if (!prefab.CompareTag("Wave"))
+        {
+            Vector2 spawnPosition = gameManager.CameraBordermanager.GetRandomPointOnScreenBorder(EnumExtensions.GetRandomEnum<ScreenBorderSide>(), 1);
+            GameObject newMinion = Pool.Instance.GetItemFromPool(prefab, spawnPosition);
+        }
+        else
+        {
+            foreach (Transform item in prefab.transform)
+            {
+                Pool.Instance.GetItemFromPool(item.gameObject, item.position);
+            }
+        }
     }
 }

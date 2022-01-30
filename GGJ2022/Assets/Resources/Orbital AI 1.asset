@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51217d6018e7c5f45b2f2b9e6a4f1286, type: 3}
-  m_Name: Zigzag AI
+  m_Script: {fileID: 11500000, guid: 7e1568fcf95ea3844bc25bd0c5f06aa8, type: 3}
+  m_Name: Orbital AI 1
   m_EditorClassIdentifier: 
-  speed: 1
-  direction: {x: 0, y: -1}
-  amplitude: 2
+  speed: 3
+  radius: 6
+  orbitalDirection: -1

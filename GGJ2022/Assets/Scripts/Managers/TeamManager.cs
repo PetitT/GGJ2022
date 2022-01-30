@@ -7,7 +7,7 @@ public class TeamManager : BaseManager
 {
     public Team currentTeam { get; private set; }
     public event Action<Team> onTeamChanged;
-    private bool canChangeTeam;
+    private bool canChangeTeam = true;
 
     public void ToggleCanChangeTeam(bool toggle)
     {
