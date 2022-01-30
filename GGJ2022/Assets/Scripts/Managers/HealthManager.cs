@@ -33,6 +33,7 @@ public class HealthManager : BaseManager
         onDeath?.Invoke();
         SoundManager.Instance.PlayClip(gameManager.feedbackData.playerExplosion);
     }
+
     public void TakeDamage(int damage)
     {
         health.TakeDamage(damage);

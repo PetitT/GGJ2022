@@ -17,6 +17,7 @@ MonoBehaviour:
   CharacterDirectionChangeAcceleration: 8
   CharacterHalfSize: 0.5
   CharacterMaxHealth: 3
+  InvulnerabilityTime: 1
   Missile: {fileID: 8911457259003707490, guid: 0014a986065765043ab3ffcfd2cd2c85, type: 3}
   MissileFireRate: 0.1
   MissilesSpeed: 20
