@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
+  score: 5
   AI: {fileID: 11400000, guid: 3b6fe16e73f556948a25c84f822b7c0b, type: 2}
 --- !u!1 &7236090219119284151
 GameObject:
