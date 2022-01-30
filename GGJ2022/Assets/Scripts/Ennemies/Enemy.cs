@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
 
     public int maxHealth = 5;
     public int score = 5;
+    private float flashIntensity = 1.5f;
 
     private Health health;
     private TeamedObject teamedObject;
@@ -70,7 +71,7 @@ public class Enemy : MonoBehaviour
 
                 Sequence s = DOTween.Sequence();
 
-                s.Append(sprite.material.DOColor(defaultColor * 10, 0.05f));
+                s.Append(sprite.material.DOColor(defaultColor * flashIntensity, 0.05f));
                 s.Append(sprite.material.DOColor(defaultColor, 0.05f));
                 s.Play();
             }
