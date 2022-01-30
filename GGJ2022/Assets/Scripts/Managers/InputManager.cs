@@ -27,7 +27,7 @@ public class InputManager : BaseManager
 
     private void CheckSpaceInput()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButtonDown("Jump"))
         {
             onSpaceInput?.Invoke();
         }
