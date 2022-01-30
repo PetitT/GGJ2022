@@ -98,8 +98,6 @@ public class Enemy : MonoBehaviour
                 await Task.Yield();
             }
         }
-
-        Debug.Log("hiku");
         sprite.material.SetFloat("_Intensity", 2);
     }
 }
