@@ -23,7 +23,7 @@ public class CharacterMaterialAnim : MonoBehaviour
 
     private void HealthManager_onHealthChanged(int obj)
     {
-        AnimateMaterial();
+       // AnimateMaterial();
     }
 
     private async void AnimateMaterial()

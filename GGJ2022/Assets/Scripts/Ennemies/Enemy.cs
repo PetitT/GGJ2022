@@ -16,8 +16,6 @@ public class Enemy : MonoBehaviour
     private SpriteRenderer sprite;
     public BaseAI AI;
 
-    private Task materialChangeTask;
-
     private void Awake()
     {
         health = new Health(maxHealth);
@@ -64,7 +62,7 @@ public class Enemy : MonoBehaviour
             {
                 SoundManager.Instance.PlayClip(GameManager.Instance.feedbackData.enemyExplosion);
                 SpawnExplosion();
-                materialChangeTask = AnimateMaterial();
+                //AnimateMaterial();
             }
         }
     }
@@ -77,7 +75,7 @@ public class Enemy : MonoBehaviour
         Explosion.transform.up = direction;
     }
 
-    private async Task AnimateMaterial()
+    private async void AnimateMaterial()
     {
         float currentIntensity = sprite.material.GetFloat("_Intensity");
         while (currentIntensity < 100)
