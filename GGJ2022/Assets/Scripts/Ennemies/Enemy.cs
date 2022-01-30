@@ -7,9 +7,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public static event Action onDeath;
+    public static event Action<Enemy> onDeath;
 
     public int maxHealth = 5;
+    public int score = 5;
 
     private Health health;
     private TeamedObject teamedObject;
@@ -51,9 +52,10 @@ public class Enemy : MonoBehaviour
     private void Health_onDeath()
     {
         gameObject.SetActive(false);
-        onDeath?.Invoke();
+        onDeath?.Invoke(this);
         SoundManager.Instance.PlayClip(GameManager.Instance.feedbackData.enemyDeath);
         SpawnBigExplosion();
+        SpawnScoreNumber();
     }
 
     public void Collide(TeamedObject obj)
@@ -87,5 +89,11 @@ public class Enemy : MonoBehaviour
     {
         GameObject newExplosion = Pool.Instance.GetItemFromPool(GameManager.Instance.feedbackData.longExplosion, transform.position);
         newExplosion.transform.Rotate(Vector3.forward * UnityEngine.Random.Range(0, 360));
+    }
+
+    private void SpawnScoreNumber()
+    {
+        GameObject scoreNumber = Pool.Instance.GetItemFromPool(GameManager.Instance.feedbackData.scoreNumber, transform.position);
+        scoreNumber.GetComponent<ScoreNumberDisplay>().Init(score);
     }
 }

@@ -15,6 +15,7 @@ public class FeedbackData : ScriptableObject
     [Header("Effects")]
     public GameObject explosion;
     public GameObject longExplosion;
+    public GameObject scoreNumber;
 
     public static FeedbackData GetFeedbackData()
     {
