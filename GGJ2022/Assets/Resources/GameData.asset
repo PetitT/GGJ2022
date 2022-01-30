@@ -37,6 +37,7 @@ MonoBehaviour:
   - {fileID: 4689516126741554427, guid: 8c050de0e0575234bad4260441294b1e, type: 3}
   - {fileID: 6430385225286366202, guid: 72d26660b9bb65045a7d2021c1cd0dd1, type: 3}
   - {fileID: 2326749334201416463, guid: 5f3ad601ad9bca248a3ad96c5511200c, type: 3}
+  - {fileID: 1288292358688606044, guid: bbd03268e265bd84bb86d911b7b24ea6, type: 3}
   EnemiesSpawnRate: 1.5
   Walls:
   - {fileID: 1840515201159431778, guid: ee2d5818acc14b642bbf360812a3db8f, type: 3}
