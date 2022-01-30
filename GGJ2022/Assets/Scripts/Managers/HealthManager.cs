@@ -47,7 +47,7 @@ public class HealthManager : BaseManager
             float X = UnityEngine.Random.Range(-random, random);
             float Y = UnityEngine.Random.Range(-random, random);
             Vector2 newPos = new Vector2(currentPos.x + X, currentPos.y + Y);
-            Pool.Instance.GetItemFromPool(gameManager.feedbackData.longExplosion, newPos);
+            Pool.Instance.GetItemFromPool(gameManager.feedbackData.redlongExplosion, newPos);
             SoundManager.Instance.PlayClip(gameManager.feedbackData.enemyExplosion);
             await Task.Delay(250);
         }

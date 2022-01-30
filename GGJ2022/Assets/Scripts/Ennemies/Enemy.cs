@@ -81,14 +81,14 @@ public class Enemy : MonoBehaviour
     private void SpawnExplosion()
     {
         Vector2 explosionPosition = transform.position /*+ (GameManager.Instance.Character.transform.position - transform.position).normalized*/;
-        GameObject Explosion = Pool.Instance.GetItemFromPool(GameManager.Instance.feedbackData.explosion, explosionPosition);
+        GameObject Explosion = Pool.Instance.GetItemFromPool(teamedObject.currentTeam == Team.Blue ? GameManager.Instance.feedbackData.blueexplosion : GameManager.Instance.feedbackData.redexplosion, explosionPosition);
         Vector2 direction = (GameManager.Instance.Character.transform.position - transform.position).normalized;
         Explosion.transform.up = direction;
     }
 
     private void SpawnBigExplosion()
     {
-        GameObject newExplosion = Pool.Instance.GetItemFromPool(GameManager.Instance.feedbackData.longExplosion, transform.position);
+        GameObject newExplosion = Pool.Instance.GetItemFromPool(teamedObject.currentTeam == Team.Blue ? GameManager.Instance.feedbackData.bluelongExplosion : GameManager.Instance.feedbackData.redlongExplosion, transform.position);
         newExplosion.transform.Rotate(Vector3.forward * UnityEngine.Random.Range(0, 360));
     }
 

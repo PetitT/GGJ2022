@@ -19,8 +19,10 @@ MonoBehaviour:
   playerExplosion: {fileID: 8300000, guid: 562f625b1231614449e10a2bb8c64692, type: 3}
   switchToRed: {fileID: 8300000, guid: d401caee18cdf4043b0fda50400bd5f4, type: 3}
   switchToBlue: {fileID: 8300000, guid: 4a846d08a3cf33744a45de45c0a6ce41, type: 3}
-  explosion: {fileID: 8919931267150954655, guid: d6f5e522140dbcb469eb2a6c032da9c6, type: 3}
-  longExplosion: {fileID: 2215432935232605428, guid: a2a4c52a06083524c9bfd90a2695d8c3, type: 3}
+  redexplosion: {fileID: 8919931267150954655, guid: d6f5e522140dbcb469eb2a6c032da9c6, type: 3}
+  blueexplosion: {fileID: 8919931267150954655, guid: 533ce4b2d2e0f3641b6853b4c8f4476d, type: 3}
+  redlongExplosion: {fileID: 2215432935232605428, guid: a2a4c52a06083524c9bfd90a2695d8c3, type: 3}
+  bluelongExplosion: {fileID: 2215432935232605428, guid: e454c30e9a851384399bc084f292783a, type: 3}
   scoreNumber: {fileID: 4214421957805769259, guid: 0202b2910c22f4a4bb7d865ebdf71445, type: 3}
   blueElectricity: {fileID: 3089046845652585454, guid: 2a8201de636f3c5409803bb737946356, type: 3}
   redElectricity: {fileID: 3126789791844266375, guid: 5647dd30d9cfae542ad388bcf58690ba, type: 3}

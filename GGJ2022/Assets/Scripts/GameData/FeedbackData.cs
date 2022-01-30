@@ -15,8 +15,10 @@ public class FeedbackData : ScriptableObject
     public AudioClip switchToBlue;
 
     [Header("Effects")]
-    public GameObject explosion;
-    public GameObject longExplosion;
+    public GameObject redexplosion;
+    public GameObject blueexplosion;
+    public GameObject redlongExplosion;
+    public GameObject bluelongExplosion;
     public GameObject scoreNumber;
     public GameObject blueElectricity;
     public GameObject redElectricity;
