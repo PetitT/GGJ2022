@@ -91,7 +91,7 @@ public class GameManager : Singleton<GameManager>
     private void StartBeginAnimation()
     {
         Fade.color = new Color(Fade.color.r, Fade.color.g, Fade.color.b, 1);
-        Fade.DOColor(new Color(Fade.color.r, Fade.color.g, Fade.color.b, 0), 1f);
+        Fade.DOColor(new Color(Fade.color.r, Fade.color.g, Fade.color.b, 0), 2f);
         Character.GetComponent<TrailRenderer>().Clear();
         Character.GetComponent<TrailRenderer>().enabled = false;
         Character.GetComponent<TrailRenderer>().enabled = true;
