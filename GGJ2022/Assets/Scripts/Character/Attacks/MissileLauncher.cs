@@ -20,6 +20,10 @@ public class MissileLauncher : BaseAttack
         GenerateNewMissile(position, Vector2.right);
         GenerateNewMissile(position, Vector2.down);
         GenerateNewMissile(position, Vector2.left);
+        GenerateNewMissile(position, new Vector2(1, 1));
+        GenerateNewMissile(position, new Vector2(-1, -1));
+        GenerateNewMissile(position, new Vector2(-1, 1));
+        GenerateNewMissile(position, new Vector2(1, -1));
 
         SoundManager.Instance.PlayClip(GameManager.Instance.feedbackData.missileShot);
     }
