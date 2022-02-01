@@ -17,6 +17,7 @@ public class TeamManager : BaseManager
     public override void OnAwake()
     {
         gameManager.InputManager.onSpaceInput += InputManager_onSpaceInput;
+        gameManager.TouchInputManager.onButtonClick += InputManager_onSpaceInput;
     }
     public override void OnBegin()
     {

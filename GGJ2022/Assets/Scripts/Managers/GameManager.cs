@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : Singleton<GameManager>
 {
     public GameObject Character;
     public GameObject Laser;
     public SpriteRenderer Fade;
+    public Button SwapButton;
 
     private GameData data;
     public GameData Data => data ??= GameData.GetGameData();
@@ -29,15 +31,15 @@ public class GameManager : Singleton<GameManager>
     public EnemySpawnManager EnemySpawnManager = new EnemySpawnManager();
     public WallsSpawnManager WallsSpawnManager = new WallsSpawnManager();
     public ScoreManager ScoreManager = new ScoreManager();
+    public TouchInputManager TouchInputManager = new TouchInputManager();
+    public TouchMovementManager TouchMovementManager = new TouchMovementManager();
 
     private bool hasGameStarted;
 
     private void Awake()
     {
-        managers.Add(InputManager);
         managers.Add(HealthManager);
         managers.Add(CameraBordermanager);
-        managers.Add(MovementManager);
         managers.Add(CharacterCollisionManager);
         managers.Add(TeamManager);
         managers.Add(TeamDisplayManager);
@@ -46,9 +48,18 @@ public class GameManager : Singleton<GameManager>
         managers.Add(WallsSpawnManager);
         managers.Add(ScoreManager);
 
+#if !UNITY_ANDROID
+        managers.Add(MovementManager);
+        managers.Add(InputManager);
+#else
+        managers.Add(TouchMovementManager);
+        managers.Add(TouchInputManager);
+#endif
+
         managers.ForEach(t => t.OnAwake());
 
         HealthManager.onDeath += EndGame;
+        SwapButton.gameObject.SetActive(false);
     }
 
     private void OnDestroy()
@@ -64,6 +75,7 @@ public class GameManager : Singleton<GameManager>
     private void StartGame()
     {
         managers.ForEach(t => t.OnBegin());
+        SwapButton.gameObject.SetActive(true);
         hasGameStarted = true;
     }
 

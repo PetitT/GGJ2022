@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f76f525e33649f84088e19580b70b1d1, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
-  CharacterSpeed: 15
-  CharacterAcceleration: 50
+  CharacterSpeed: 30
+  CharacterAcceleration: 100
   CharacterDirectionChangeAcceleration: 8
   CharacterHalfSize: 0.5
   CharacterMaxHealth: 5
